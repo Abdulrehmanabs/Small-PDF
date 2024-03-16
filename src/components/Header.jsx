@@ -6,7 +6,7 @@ export default function Header() {
       <Navbar></Navbar>
       <img
         className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
-        src="Header-BG.png"
+        src="/Header-BG.png"
         alt="header-greadient"
       />
 
@@ -22,14 +22,12 @@ export default function Header() {
             Share your site Link or Upload any PDF file to create a ChatGPT
             powered custom chatbot in 5 Minutes.
           </p>
-          <div className="flex justify-center">
-            <button className="mt-6 me-4 px-6 py-2 text-[18px] font-semibold bg-white rounded-3xl">
-              AI Tools Added Today
-            </button>
-            <button className="mt-6 px-6 py-2 text-[18px] font-semibold bg-white rounded-3xl">
-              AI News
-            </button>
-          </div>
+          <button className="mt-6 me-4 px-6 py-2 text-[18px] font-semibold bg-white rounded-3xl">
+            AI Tools Added Today
+          </button>
+          <button className="mt-6 px-6 py-2 text-[18px] font-semibold bg-white rounded-3xl">
+            AI News
+          </button>
         </div>
         <div className="max-w-[900px] mx-auto mt-20 flex">
           <div className="bg-[#081E4A] w-[90%] text-white rounded-xl flex overflow-hidden px-6 py-2  border-2 border-white">
@@ -45,7 +43,7 @@ export default function Header() {
             </select>
           </div>
           <button className="p-4 ms-6 rounded-xl bg-[#FEB92C]  border-2 border-white">
-            <img src="vector.png" alt="send message" />
+            <img src="/Vector.png" alt="send message" />
           </button>
         </div>
         <div className="p-20"></div>

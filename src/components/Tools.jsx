@@ -144,7 +144,7 @@ const Tools = () => {
         <div className="text-center mt-10">
           <button
             type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800  rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none"
+            className="text-white font-bold bg-blue-700 hover:bg-blue-800  rounded-lg text-md px-5 py-2.5 mb-2 focus:outline-none"
           >
             See All PDF Tools
           </button>
