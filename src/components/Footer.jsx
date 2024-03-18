@@ -128,30 +128,30 @@ const Footer = () => {
             <a href="#Instagram">
               <img
                 className="w-8"
-                src="instagram-icon.svg"
+                src="/instagram-icon.svg"
                 alt="instagram-icon"
               />
             </a>
             <a href="#twitter">
-              <img className="w-8" src="x-icon.svg" alt="x-icon" />
+              <img className="w-8" src="/x-icon.svg" alt="x-icon" />
             </a>
 
             <a href="#Linkedin">
               <img
                 className="w-8"
-                src="linkedin-icon.svg"
+                src="/linkedin-icon.svg"
                 alt="linkedin-icon"
               />
             </a>
             <a href="#facebook">
               <img
                 className="w-8"
-                src="facebook-icon.svg"
+                src="/facebook-icon.svg"
                 alt="facebook-icon"
               />
             </a>
             <a href="#youtube">
-              <img className="w-8" src="youtube-icon.svg" alt="youtube-icon" />
+              <img className="w-8" src="/youtube-icon.svg" alt="youtube-icon" />
             </a>
           </div>
         </div>
