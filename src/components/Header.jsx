@@ -1,6 +1,24 @@
+// import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { Navbar } from "./Navbar";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  // let { register, handleSubmit } = useForm();
+  let [inputValue, setInputValue] = useState("");
+  let [category, setCategory] = useState("");
+  let router = useRouter();
+
+  function formData(event) {
+    event.preventDefault();
+    if (category == "All Categories" || inputValue === "") {
+      alert("plz fill the recomnded value");
+      return;
+    }
+    router.push("/" + category.split(" ").join("-").toLowerCase());
+    console.log(inputValue, category);
+  }
+
   return (
     <div className="relative ">
       <Navbar></Navbar>
@@ -29,23 +47,71 @@ export default function Header() {
             AI News
           </button>
         </div>
-        <div className="max-w-[900px] mx-auto mt-20 flex">
+        <form onSubmit={formData} className="max-w-[900px] mx-auto mt-20 flex">
           <div className="bg-[#081E4A] w-[90%] text-white rounded-xl flex overflow-hidden px-6 py-2  border-2 border-white">
             <input
               className="placeholder-current bg-inherit w-full  focus:outline-none"
               type="text"
+              onChange={(e) => {
+                setInputValue(e.target.value);
+              }}
+              // {...register("inputValue", { required: true })}
+              // defaultValue={"I Want an AI to "}
               placeholder="I Want an AI to "
-              defaultValue={"I Want an AI to "}
+              list="Tools"
             />
+            <datalist id="Tools">
+              <option value="Compress PDF" />
+              <option value="PDF Converter" />
+              <option value="PDF Scanner" />
+              <option value="Merge PDF" />
+              <option value="Split PDF" />
+              <option value="Rotate PDF" />
+              <option value="Delete PDF Pages" />
+              <option value="Extract PDF Pages" />
+              <option value="Edit PDF" />
+              <option value="PDF Reader" />
+              {/* <option value="Number Pages" />
+              <option value="AI PDF Summarizer" />
+              <option value="PDF to Word" />
+              <option value="PDF to Excel" />
+              <option value="PDF to PPT" />
+              <option value="PDF to JPG" />
+              <option value="Word to PDF" />
+              <option value="Excel to PDF" />
+              <option value="PPT to PDF" />
+              <option value="JPG to PDF" />
+              <option value="PDF OCR" />
+              <option value="eSign PDF" />
+              <option value="Unlock PDF" />
+              <option value="Protect PDF" />
+              <option value="Flatten PDF" /> */}
+            </datalist>
+
             <pre className="sm:block hidden bg-gray-400 w-0 border border-white ms-auto"></pre>
-            <select className="sm:ms-6 bg-inherit  focus:outline-none cursor-pointer">
-              <option>All Categories</option>
+            <select
+              onChange={(e) => {
+                setCategory(e.target.value);
+              }}
+              className="sm:ms-6 bg-inherit  focus:outline-none cursor-pointer"
+            >
+              <option value="All Categories">All Categories</option>
+              <option value="Compress PDF">Compress PDF</option>
+              <option value="PDF Converter">PDF Converter</option>
+              <option value="PDF Scanner">PDF Scanner </option>
+              <option value="Merge PDF">Merge PDF </option>
+              <option value="Split PDF">Split PDF </option>
+              <option value="Rotate PDF">Rotate PDF </option>
+              <option value="Delete PDF Pages">Delete PDF Pages</option>
+              <option value="Extract PDF Pages">Extract PDF Pages</option>
+              <option value="Edit PDF">Edit PDF</option>
             </select>
           </div>
-          <button className="p-4 ms-6 rounded-xl bg-[#FEB92C]  border-2 border-white">
+          <button className="p-4 ms-6 rounded-xl bg-[#FEB92C] flex justify-center  border-2 border-white">
             <img src="/Vector.png" alt="send message" />
           </button>
-        </div>
+        </form>
+        {/* Extra Spacing in the Bottom */}
         <div className="p-20"></div>
       </div>
       {/* Container */}
