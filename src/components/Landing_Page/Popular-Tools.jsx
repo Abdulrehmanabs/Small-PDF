@@ -16,7 +16,7 @@ const Popular_Tools = () => {
         </div>
         <div className="mx-auto mt-10 max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left ">
           <Link
-            href="/tool/"
+            href="/tool/PDF to Word"
             className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
           >
             <div className="font-bold flex">
@@ -35,7 +35,7 @@ const Popular_Tools = () => {
             </p>
           </Link>
           <Link
-            href="/tool/"
+            href="/tool/Merge PDF"
             className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
           >
             <div className="font-bold flex">
@@ -54,7 +54,7 @@ const Popular_Tools = () => {
             </p>
           </Link>
           <Link
-            href="/tool/"
+            href="/tool/JPG to PDF"
             className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
           >
             <div className="font-bold flex">
@@ -73,7 +73,7 @@ const Popular_Tools = () => {
             </p>
           </Link>
           <Link
-            href="/tool/"
+            href="/tool/eSign PDF"
             className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
           >
             <div className="font-bold flex">
@@ -92,7 +92,7 @@ const Popular_Tools = () => {
             </p>
           </Link>
           <Link
-            href="/tool/"
+            href="/tool/Edit PDF"
             className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
           >
             <div className="font-bold flex">
@@ -111,7 +111,7 @@ const Popular_Tools = () => {
             </p>
           </Link>
           <Link
-            href="/tool/"
+            href="/tool/Compress PDF"
             className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
           >
             <div className="font-bold flex">
@@ -132,7 +132,7 @@ const Popular_Tools = () => {
         </div>
         <div className="text-center mt-10">
           <Link
-            href="/tools"
+            href="/"
             type="button"
             className="text-white font-bold bg-blue-700 hover:bg-blue-800  rounded-lg text-md px-5 py-2.5 mb-2 focus:outline-none"
           >
