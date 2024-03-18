@@ -1,18 +1,20 @@
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
-import Header from "@/components/Header";
-import About from "@/components/About";
-import Tools from "@/components/Tools";
-import Footer from "@/components/Footer";
+import Header from "@/components/Landing_Page/Header";
+import About from "@/components/Landing_Page/About";
+import Popular_Tools from "@/components/Landing_Page/Popular-Tools";
+import Pricing from "@/components/Landing_Page/Pricing";
+import All_Tools from "@/components/Landing_Page/All-tools";
 
 export default function Home() {
   return (
     <main className={`min-h-screen  ${inter.className}`}>
       <Header></Header>
       <About></About>
-      <Tools></Tools>
-      <Footer></Footer>
+      <Popular_Tools></Popular_Tools>
+      <Pricing></Pricing>
+      <All_Tools></All_Tools>
     </main>
   );
 }

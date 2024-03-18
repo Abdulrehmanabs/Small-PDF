@@ -1,27 +1,34 @@
 // import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { Navbar } from "./Navbar";
+import { Navbar } from "../Navbar";
 import { useRouter } from "next/router";
 
 export default function Header() {
   // let { register, handleSubmit } = useForm();
   let [inputValue, setInputValue] = useState("");
-  let [category, setCategory] = useState("");
+  let [category, setCategory] = useState("All Categories");
   let router = useRouter();
 
   function formData(event) {
     event.preventDefault();
-    if (category == "All Categories" || inputValue === "") {
-      alert("plz fill the recomnded value");
+    if (inputValue === "") {
+      alert("Atleast Select a Single Option");
       return;
     }
-    router.push("/" + category.split(" ").join("-").toLowerCase());
+
+    router.push(
+      "/tool/InputValue=" +
+        inputValue.split(" ").join("-").toLowerCase() +
+        "&&Category=" +
+        category.split(" ").join("-").toLowerCase()
+    );
     console.log(inputValue, category);
   }
 
   return (
-    <div className="relative ">
-      <Navbar></Navbar>
+    <div className="relative -mt-20 ">
+      <div className="py-10"></div>
+      {/* <Navbar></Navbar> */}
       <img
         className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/Header-BG.png"
