@@ -5,7 +5,7 @@ import Header from "@/components/Landing_Page/Header";
 import About from "@/components/Landing_Page/About";
 import Popular_Tools from "@/components/Landing_Page/Popular-Tools";
 import Pricing from "@/components/Landing_Page/Pricing";
-import All_Tools from "@/components/Landing_Page/All-tools";
+import Why_Choose from "@/components/Landing_Page/Why-Choose";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <About></About>
       <Popular_Tools></Popular_Tools>
       <Pricing></Pricing>
-      <All_Tools></All_Tools>
+      <Why_Choose></Why_Choose>
     </main>
   );
 }

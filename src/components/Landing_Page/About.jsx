@@ -1,9 +1,9 @@
 const About = () => {
   return (
-    <div className=" mx-10 relative">
+    <div className=" sm:mx-10 mx-4 relative">
       {/* max-w-screen-xl */}
       <div className="max-w-[1100px] mx-auto rounded-2xl bg-white   -mt-36 ">
-        <div className="sm:px-20 px-10 py-14 ">
+        <div className="sm:px-20 px-6 py-14 ">
           <h2 className="mb-6 text-center text-[#081E4A]  text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             16 Best <span className="text-blue-700">AI Tools</span> for Web
             Designers

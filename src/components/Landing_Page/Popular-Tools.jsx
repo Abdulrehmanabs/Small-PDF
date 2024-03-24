@@ -1,6 +1,40 @@
 import Link from "next/link";
 
 const Popular_Tools = () => {
+  const Popular_tools_data = [
+    {
+      image: "/tools/pdf-to-word-to-pdf.svg",
+      title: "PDF to Word",
+      description: "Convert PDFs to editable Word documents",
+    },
+    {
+      image: "/tools/merge-pdf.svg",
+      title: "Merge PDF",
+      description: "Combine multiple PDFs into one unified document",
+    },
+    {
+      image: "/tools/pdf-to-jpg-to-pdf.svg",
+      title: "JPG to PDF",
+      description: "Transform JPG, PNG, BMP, GIF, and TIFF images to PDF",
+    },
+    {
+      image: "/tools/esign-pdf.svg",
+      title: "eSign PDF",
+      description:
+        "Create your signature, sign your PDF and request people to sign",
+    },
+    {
+      image: "/tools/edit-pdf.svg",
+      title: "Edit PDF",
+      description:
+        "Add text, shapes, images and freehand annotations to your PDF",
+    },
+    {
+      image: "/tools/compress-pdf.svg",
+      title: "Compress PDF",
+      description: "Reduce the size of your PDF without losing quality",
+    },
+  ];
   return (
     <section className="relative overflow-hidden bg-gray-100 py-12 sm:py-16 lg:py-20">
       <div className="mx-auto px-6">
@@ -14,122 +48,34 @@ const Popular_Tools = () => {
             today!
           </p>
         </div>
-        <div className="mx-auto mt-10 max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left ">
-          <Link
-            href="/tool/PDF to Word"
-            className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
-          >
-            <div className="font-bold flex">
-              <span className="">PDF to Word</span>
-              <svg
-                className="ms-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+        {/* ------------------- */}
+        <div className="mx-auto mt-10 max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left ">
+          {Popular_tools_data.map((item) => {
+            return (
+              <Link
+                href={"/tool/" + item.title}
+                className="flex items-start backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
               >
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
-            </div>
-            <p className="mt-2 text-gray-600">
-              Convert PDFs to editable Word documents
-            </p>
-          </Link>
-          <Link
-            href="/tool/Merge PDF"
-            className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
-          >
-            <div className="font-bold flex">
-              <span className="">Merge PDF</span>
-              <svg
-                className="ms-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
-            </div>
-            <p className="mt-2 text-gray-600">
-              Combine multiple PDFs into one unified document
-            </p>
-          </Link>
-          <Link
-            href="/tool/JPG to PDF"
-            className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
-          >
-            <div className="font-bold flex">
-              <span className="">JPG to PDF</span>
-              <svg
-                className="ms-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
-            </div>
-            <p className="mt-2 text-gray-600">
-              Transform JPG, PNG, BMP, GIF, and TIFF images to PDF
-            </p>
-          </Link>
-          <Link
-            href="/tool/eSign PDF"
-            className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
-          >
-            <div className="font-bold flex">
-              <span className="">eSign PDF</span>
-              <svg
-                className="ms-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
-            </div>
-            <p className="mt-2 text-gray-600">
-              Create your signature, sign your PDF and request people to sign
-            </p>
-          </Link>
-          <Link
-            href="/tool/Edit PDF"
-            className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
-          >
-            <div className="font-bold flex">
-              <span className="">Edit PDF</span>
-              <svg
-                className="ms-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
-            </div>
-            <p className="mt-2 text-gray-600">
-              Add text, shapes, images and freehand annotations to your PDF
-            </p>
-          </Link>
-          <Link
-            href="/tool/Compress PDF"
-            className="backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
-          >
-            <div className="font-bold flex">
-              <span className="">Compress PDF</span>
-              <svg
-                className="ms-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
-            </div>
-            <p className="mt-2 text-gray-600">
-              Reduce the size of your PDF without losing quality
-            </p>
-          </Link>
+                <img className="w-[35px]  me-3" src={item.image} alt="ertyu" />
+                <div className="w-full">
+                  <div className="font-bold flex">
+                    <span className="">{item.title}</span>
+                    <svg
+                      className="ms-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                    >
+                      <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                    </svg>
+                  </div>
+                  <p className="mt-2 text-gray-700">{item.description}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
+        {/* ------------------- */}
         <div className="text-center mt-10">
           <Link
             href="/"

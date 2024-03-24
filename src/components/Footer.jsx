@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className="bg-gray-50">
       <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 xl:px-10">
         <div className="max-w-sm">
-          <div className="mb-6 flex h-12 items-center space-x-2">
-            <span className="text-2xl font-bold">Giridot</span>
+          <div className="mb-4 mt-4 space-x-2">
+            <span className="text-3xl font-bold">Giridot</span>
           </div>
           <div className="text-gray-800">
             This Website design & Code was built using our Tools. Treat it as a
@@ -19,28 +19,38 @@ const Footer = () => {
         </div>
         {/* grid cols Company */}
         <div className="">
-          <div className="mt-4 mb-2 font-medium xl:mb-4 h-12 text-xl font-bold sm:text-center">
-            Company
-          </div>
+          <div className="mt-4 mb-2 font-medium xl:mb-4 text-xl">Company</div>
           <nav aria-label="Footer Navigation" className="text-gray-500">
             <ul className="space-y-3">
-              <li className="sm:text-center">
-                <a className=" hover:underline " href="#">
+              <li>
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded "
+                  href="#"
+                >
                   About Us
                 </a>
               </li>
-              <li className="sm:text-center">
-                <a className=" hover:underline " href="#">
+              <li>
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded "
+                  href="#"
+                >
                   Contact Us
                 </a>
               </li>
-              <li className="sm:text-center">
-                <a className=" hover:underline " href="#">
+              <li>
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded "
+                  href="#"
+                >
                   Newsletter
                 </a>
               </li>
-              <li className="sm:text-center">
-                <a className=" hover:underline " href="#">
+              <li>
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded "
+                  href="#"
+                >
                   Privacy Policy
                 </a>
               </li>
@@ -49,38 +59,54 @@ const Footer = () => {
         </div>
         {/* grid cols Products */}
         <div className="">
-          <div className="mt-4 mb-2 font-medium xl:mb-4 h-12 text-xl font-bold">
-            Products
-          </div>
+          <div className="mt-4 mb-2 font-medium xl:mb-4 text-xl">Products</div>
           <nav aria-label="Footer Navigation" className="text-gray-500">
             <ul className="space-y-3">
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Email Builder
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Website Generator
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Bootstrap Builder
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Static Pages
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Help Articles
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Affiliate Program
                 </a>
               </li>
@@ -89,28 +115,38 @@ const Footer = () => {
         </div>
         {/* grid cols Resource */}
         <div className="">
-          <div className="mt-4 mb-2 font-medium xl:mb-4 h-12 text-xl font-bold">
-            Resource
-          </div>
+          <div className="mt-4 mb-2 font-medium xl:mb-4 text-xl">Resource</div>
           <nav aria-label="Footer Navigation" className="text-gray-500">
             <ul className="space-y-3">
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   No Code Design
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Uptime Monitoring
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Static Website Host
                 </a>
               </li>
               <li>
-                <a className=" hover:underline" href="#">
+                <a
+                  className=" hover:bg-gray-200 hover:font-semibold py-1 px-2 rounded"
+                  href="#"
+                >
                   Email Marketing
                 </a>
               </li>
@@ -124,7 +160,7 @@ const Footer = () => {
           <div className="order-2">
             Copyright © 2024 Giridot | All Rights Reserved
           </div>
-          <div className="order-1 flex gap-6">
+          <div className="order-1 flex gap-6 justify-center">
             <a href="#Instagram">
               <img
                 className="w-8"

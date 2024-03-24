@@ -11,10 +11,6 @@ export default function Header() {
 
   function formData(event) {
     event.preventDefault();
-    if (inputValue === "") {
-      alert("Atleast Select a Single Option");
-      return;
-    }
 
     router.push(
       "/tool/InputValue=" +
@@ -27,15 +23,15 @@ export default function Header() {
 
   return (
     <div className="relative -mt-20 ">
-      <div className="py-10"></div>
-      {/* <Navbar></Navbar> */}
+      {/* Extra Spacing on the Top */}
+      <div className="py-10 sm:py-1"></div>
       <img
         className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/Header-BG.png"
         alt="header-greadient"
       />
 
-      <div className="mx-auto text-center px-6 lg:px-8 py-24 sm:py-48">
+      <div className="mx-auto text-center px-6 lg:px-8 py-24 sm:py-44">
         <div className="max-w-[800px] mx-auto">
           <h1 className="text-[25px] font-[600] mb-8 text-white">
             Welcome to Giridot
@@ -59,15 +55,15 @@ export default function Header() {
             <input
               className="placeholder-current bg-inherit w-full  focus:outline-none"
               type="text"
+              required
               onChange={(e) => {
                 setInputValue(e.target.value);
               }}
               // {...register("inputValue", { required: true })}
               // defaultValue={"I Want an AI to "}
               placeholder="I Want an AI to "
-              list="Tools"
             />
-            <datalist id="Tools">
+            <datalist>
               <option value="Compress PDF" />
               <option value="PDF Converter" />
               <option value="PDF Scanner" />
@@ -100,7 +96,7 @@ export default function Header() {
               onChange={(e) => {
                 setCategory(e.target.value);
               }}
-              className="sm:ms-6 bg-inherit  focus:outline-none cursor-pointer"
+              className="sm:ms-6 sm:block hidden bg-inherit focus:outline-none cursor-pointer"
             >
               <option value="All Categories">All Categories</option>
               <option value="Compress PDF">Compress PDF</option>
@@ -119,7 +115,7 @@ export default function Header() {
           </button>
         </form>
         {/* Extra Spacing in the Bottom */}
-        <div className="p-20"></div>
+        <div className="p-10"></div>
       </div>
       {/* Container */}
     </div>
