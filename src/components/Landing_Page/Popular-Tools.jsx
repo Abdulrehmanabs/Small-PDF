@@ -50,9 +50,10 @@ const Popular_Tools = () => {
         </div>
         {/* ------------------- */}
         <div className="mx-auto mt-10 max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left ">
-          {Popular_tools_data.map((item) => {
+          {Popular_tools_data.map((item, index) => {
             return (
               <Link
+                key={index}
                 href={"/tool/" + item.title}
                 className="flex items-start backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
               >

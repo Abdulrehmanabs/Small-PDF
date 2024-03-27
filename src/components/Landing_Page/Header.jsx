@@ -1,10 +1,10 @@
-// import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { Navbar } from "../Navbar";
 import { useRouter } from "next/router";
 
 export default function Header() {
-  // let { register, handleSubmit } = useForm();
+  let { register, handleSubmit } = useForm();
+
   let [inputValue, setInputValue] = useState("");
   let [category, setCategory] = useState("All Categories");
   let router = useRouter();

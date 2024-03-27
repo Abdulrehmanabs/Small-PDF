@@ -1,11 +1,21 @@
+import Link from "next/link";
+
 const All_Tools = () => {
   const Convert_and_Compress = [
-    { text: "Compress PDF", image: "/tools/compress-pdf.svg", bg: "#F23030" },
-    { text: "PDF Converter", image: "/tools/pdf-converter.svg", bg: "#F23030" },
+    {
+      text: "Compress PDF",
+      image: "/tools/compress-pdf.svg",
+      bg: "Convert_and_Compress",
+    },
+    {
+      text: "PDF Converter",
+      image: "/tools/pdf-converter.svg",
+      bg: "Convert_and_Compress",
+    },
     {
       text: "PDF Scanner",
       image: "/tools/pdf-scanner.svg",
-      bg: "#F23030" || "#003CB2",
+      bg: "Convert_and_Compress",
     },
   ];
 
@@ -13,27 +23,27 @@ const All_Tools = () => {
     {
       text: "Merge PDF",
       image: "/tools/merge-pdf.svg",
-      bg: "#F23030" || "#7961F2",
+      bg: "Organize",
     },
     {
       text: "Split PDF",
       image: "/tools/split-pdf.svg",
-      bg: "#F23030" || "#7961F2",
+      bg: "Organize",
     },
     {
       text: "Rotate PDF",
       image: "/tools/rotate-pdf.svg",
-      bg: "#F23030" || "#7961F2",
+      bg: "Organize",
     },
     {
       text: "Delete Pages",
       image: "/tools/delete-pdf-pages.svg",
-      bg: "#F23030" || "#7961F2",
+      bg: "Organize",
     },
     {
       text: "Extract Pages",
       image: "/tools/extract-pdf-pages.svg",
-      bg: "#F23030" || "#7961F2",
+      bg: "Organize",
     },
   ];
 
@@ -41,22 +51,22 @@ const All_Tools = () => {
     {
       text: "Edit PDF",
       image: "/tools/edit-pdf.svg",
-      bg: "#F23030" || "#0FC0C5",
+      bg: "View_and_Edit",
     },
     {
       text: "PDF Reader",
       image: "/tools/pdf-reader.svg",
-      bg: "#F23030" || "#0FC0C5",
+      bg: "View_and_Edit",
     },
     {
       text: "Number Pages",
       image: "/tools/number-pages.svg",
-      bg: "#F23030" || "#0FC0C5",
+      bg: "View_and_Edit",
     },
     {
       text: "AI Summarizer",
       image: "/tools/ai-pdf-summarizer.svg",
-      bg: "#F23030" || "#0FC0C5",
+      bg: "View_and_Edit",
     },
   ];
 
@@ -64,22 +74,22 @@ const All_Tools = () => {
     {
       text: "PDF to Word",
       image: "/tools/pdf-to-word-to-pdf.svg",
-      bg: "#F23030" || "#3D99F5",
+      bg: "Convert_PDF",
     },
     {
       text: "PDF to Excel",
       image: "/tools/pdf-to-excel-to-pdf.svg",
-      bg: "#F23030" || "#0C4",
+      bg: "Convert_PDF",
     },
     {
       text: "PDF to PPT",
       image: "/tools/pdf-to-ppt-to-pdf.svg",
-      bg: "#F23030" || "#FF8000",
+      bg: "Convert_PDF",
     },
     {
       text: "PDF to JPG",
       image: "/tools/pdf-to-jpg-to-pdf.svg",
-      bg: "#F23030" || "#FFB700",
+      bg: "Convert_PDF",
     },
   ];
 
@@ -87,38 +97,39 @@ const All_Tools = () => {
     {
       text: "eSign PDF",
       image: "/tools/esign-pdf.svg",
-      bg: "#F23030" || "#E667E6",
+      bg: "Sign_and_Security",
     },
     {
       text: "Unlock PDF",
       image: "/tools/unlock-pdf.svg",
-      bg: "#F23030" || "#FF5975",
+      bg: "Sign_and_Security",
     },
     {
       text: "Protect PDF",
       image: "/tools/protect-pdf.svg",
-      bg: "#F23030" || "#FF5975",
+      bg: "Sign_and_Security",
     },
     {
       text: "Flatten PDF",
       image: "/tools/flatten-pdf.svg",
-      bg: "#F23030" || "#FF5975",
+      bg: "Sign_and_Security",
     },
   ];
 
   return (
-    <div className="border-gray-400 border-t-[1px] mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 xl:px-10">
+    <div className=" mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 xl:px-10">
       {/* Convert & Compress */}
       <div>
         <h2 className="mt-4 mb-2 font-medium xl:mb-4 ">Convert & Compress</h2>
         <div className="text-gray-500">
           <ul className="space-y-3">
-            {Convert_and_Compress.map((item) => {
+            {Convert_and_Compress.map((item, index) => {
               return (
                 <li
-                  className={`hover:bg-[${item.bg}] hover:text-white hover:font-semibold rounded `}
+                  key={index}
+                  className={`${item.bg} hover:text-white hover:font-semibold rounded `}
                 >
-                  <a
+                  <Link
                     className="flex w-[100%]  px-2 py-1"
                     href={"/tool/" + item.text}
                   >
@@ -128,7 +139,7 @@ const All_Tools = () => {
                       alt={item.text}
                     />
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -140,12 +151,13 @@ const All_Tools = () => {
         <h2 className="mt-4 mb-2 font-medium xl:mb-4 ">Organize</h2>
         <div className="text-gray-500">
           <ul className="space-y-3">
-            {Organize.map((item) => {
+            {Organize.map((item, index) => {
               return (
                 <li
-                  className={`hover:bg-[${item.bg}] hover:text-white hover:font-semibold rounded `}
+                  key={index}
+                  className={`${item.bg} hover:text-white hover:font-semibold rounded `}
                 >
-                  <a
+                  <Link
                     className="flex w-[100%]  px-2 py-1"
                     href={"/tool/" + item.text}
                   >
@@ -155,7 +167,7 @@ const All_Tools = () => {
                       alt={item.text}
                     />
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -167,13 +179,13 @@ const All_Tools = () => {
         <h2 className="mt-4 mb-2 font-medium xl:mb-4 ">View & Edit</h2>
         <div className="text-gray-500">
           <ul className="space-y-3">
-            {View_and_Edit.map((item) => {
+            {View_and_Edit.map((item, index) => {
               return (
                 <li
-                  // style={{ background: item.bg }}
-                  className={`hover:bg-[${item.bg}] hover:text-white hover:font-semibold rounded `}
+                  key={index}
+                  className={`${item.bg} hover:text-white hover:font-semibold rounded `}
                 >
-                  <a
+                  <Link
                     className="flex w-[100%]  px-2 py-1"
                     href={"/tool/" + item.text}
                   >
@@ -183,7 +195,7 @@ const All_Tools = () => {
                       alt={item.text}
                     />
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -195,12 +207,13 @@ const All_Tools = () => {
         <h2 className="mt-4 mb-2 font-medium xl:mb-4 ">Convert from PDF</h2>
         <div className="text-gray-500">
           <ul className="space-y-3">
-            {Convert_PDF.map((item) => {
+            {Convert_PDF.map((item, index) => {
               return (
                 <li
-                  className={`hover:bg-[${item.bg}] hover:text-white hover:font-semibold rounded `}
+                  key={index}
+                  className={`${item.bg} hover:text-white hover:font-semibold rounded `}
                 >
-                  <a
+                  <Link
                     className="flex w-[100%]  px-2 py-1"
                     href={"/tool/" + item.text}
                   >
@@ -210,7 +223,7 @@ const All_Tools = () => {
                       alt={item.text}
                     />
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -225,13 +238,14 @@ const All_Tools = () => {
             {Convert_PDF.concat({
               text: "PDF OCR",
               image: "/tools/pdf-ocr.svg",
-              bg: "#F23030",
-            }).map((item) => {
+              bg: "Convert_and_Compress",
+            }).map((item, index) => {
               return (
                 <li
-                  className={`hover:bg-[${item.bg}] hover:text-white hover:font-semibold rounded `}
+                  key={index}
+                  className={`${item.bg} hover:text-white hover:font-semibold rounded `}
                 >
-                  <a
+                  <Link
                     className="flex w-[100%]  px-2 py-1"
                     href={"/tool/" + item.text.split(" ").reverse().join(" ")}
                   >
@@ -241,7 +255,7 @@ const All_Tools = () => {
                       alt={item.text.split(" ").reverse().join(" ")}
                     />
                     {item.text.split(" ").reverse().join(" ")}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -253,12 +267,13 @@ const All_Tools = () => {
         <h2 className="mt-4 mb-2 font-medium xl:mb-4 ">Sign & Security</h2>
         <div className="text-gray-500">
           <ul className="space-y-3">
-            {Sign_and_Security.map((item) => {
+            {Sign_and_Security.map((item, index) => {
               return (
                 <li
-                  className={`hover:bg-[${item.bg}] hover:text-white hover:font-semibold rounded `}
+                  key={index}
+                  className={`${item.bg} hover:text-white hover:font-semibold rounded `}
                 >
-                  <a
+                  <Link
                     className="flex w-[100%]  px-2 py-1"
                     href={"/tool/" + item.text}
                   >
@@ -268,7 +283,7 @@ const All_Tools = () => {
                       alt={item.text}
                     />
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
