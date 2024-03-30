@@ -54,7 +54,7 @@ const Popular_Tools = () => {
             return (
               <Link
                 key={index}
-                href={"/tool/" + item.title}
+                href={"/tool/" + item.title.split(" ").join("-")}
                 className="flex items-start backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
               >
                 <img className="w-[35px]  me-3" src={item.image} alt="ertyu" />

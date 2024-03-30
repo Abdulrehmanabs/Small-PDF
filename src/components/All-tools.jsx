@@ -8,7 +8,7 @@ const All_Tools = () => {
       bg: "Convert_and_Compress",
     },
     {
-      text: "PDF Converter",
+      text: "PDF Convertor",
       image: "/tools/pdf-converter.svg",
       bg: "Convert_and_Compress",
     },
@@ -131,7 +131,7 @@ const All_Tools = () => {
                 >
                   <Link
                     className="flex w-[100%]  px-2 py-1"
-                    href={"/tool/" + item.text}
+                    href={"/tool/" + item.text.split(" ").join("-")}
                   >
                     <img
                       className="w-[25px] me-2"
@@ -159,7 +159,7 @@ const All_Tools = () => {
                 >
                   <Link
                     className="flex w-[100%]  px-2 py-1"
-                    href={"/tool/" + item.text}
+                    href={"/tool/" + item.text.split(" ").join("-")}
                   >
                     <img
                       className="w-[25px] me-2"
@@ -187,7 +187,7 @@ const All_Tools = () => {
                 >
                   <Link
                     className="flex w-[100%]  px-2 py-1"
-                    href={"/tool/" + item.text}
+                    href={"/tool/" + item.text.split(" ").join("-")}
                   >
                     <img
                       className="w-[25px] me-2"
@@ -215,7 +215,7 @@ const All_Tools = () => {
                 >
                   <Link
                     className="flex w-[100%]  px-2 py-1"
-                    href={"/tool/" + item.text}
+                    href={"/tool/" + item.text.split(" ").join("-")}
                   >
                     <img
                       className="w-[25px] me-2"
@@ -247,7 +247,7 @@ const All_Tools = () => {
                 >
                   <Link
                     className="flex w-[100%]  px-2 py-1"
-                    href={"/tool/" + item.text.split(" ").reverse().join(" ")}
+                    href={"/tool/" + item.text.split(" ").reverse().join("-")}
                   >
                     <img
                       className="w-[25px] me-2"
@@ -275,7 +275,7 @@ const All_Tools = () => {
                 >
                   <Link
                     className="flex w-[100%]  px-2 py-1"
-                    href={"/tool/" + item.text}
+                    href={"/tool/" + item.text.split(" ").join("-")}
                   >
                     <img
                       className="w-[25px] me-2"
