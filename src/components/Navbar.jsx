@@ -56,7 +56,7 @@ export const Navbar = () => {
           id="dropdown-open"
           defaultChecked=""
         />
-        <div className="peer-checked:block -z-10 hidden absolute top-14 left-0 w-full max-h-[80vh] overflow-auto bg-white shadow-lg">
+        <div className="peer-checked:block -z-10 hidden absolute top-14 left-0 w-full max-h-[100vh] overflow-auto bg-white shadow-lg">
           <All_Tools></All_Tools>
         </div>
         <Link

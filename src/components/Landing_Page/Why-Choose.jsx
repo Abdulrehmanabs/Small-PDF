@@ -3,37 +3,37 @@ import React from "react";
 const Why_Choose = () => {
   const whyChoose = [
     {
-      image: "/why-choose-us/People-Trust-Us.svg",
+      image: "https://s.smallpdf.com/static/fab0b222d02f8d15.svg",
       title: "People Trust Us",
       description:
         "Over a billion users have used our service to simplify their work with digital documents.",
     },
     {
-      image: "/why-choose-us/Businesses-Trust-Us.svg",
+      image: "https://s.smallpdf.com/static/84121b568dbdb86e.svg",
       title: "Businesses Trust Us",
       description:
         "We’re one of the highest-rated PDF software on major B2B software listing platforms: Capterra, G2, and TrustPilot.",
     },
     {
-      image: "/why-choose-us/Our-Partners-Trust-Us.svg",
+      image: "https://s.smallpdf.com/static/bb9d0a11fb7606ac.svg",
       title: "Our Partners Trust Us",
       description:
         "Unlock bonus features with the Smallpdf Chrome Extension, Google Workspace, and Dropbox App—all free to use.",
     },
     {
-      image: "/why-choose-us/Customer-Support.svg",
+      image: "https://s.smallpdf.com/static/6307d219b9e3c9aa.svg",
       title: "24/7 Customer Support",
       description:
         "Get all the help you need with our round-the-clock customer support.",
     },
     {
-      image: "/why-choose-us/TLS-Encryption.svg",
+      image: "https://s.smallpdf.com/static/e12bb76d471da4cc.svg",
       title: "256-Bit TLS Encryption",
       description:
         "We use 256-bit TLS encryption for secure information transfer.",
     },
     {
-      image: "/why-choose-us/Security-Standards.png",
+      image: "https://s.smallpdf.com/static/0b212f4e700cc9a5.png",
       title: "Security Standards",
       description:
         "Your safety is our priority. Smallpdf is ISO/IEC 27001 certified and GDPR, CCPA, and nFADP compliant.",

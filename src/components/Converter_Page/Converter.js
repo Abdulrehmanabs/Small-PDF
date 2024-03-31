@@ -1,6 +1,6 @@
 const Converter = () => {
     return (
-        <section className='py-24 flex md:flex-row flex-col justify-center items-center gap-5 max-w-screen-xl mx-auto'>
+        <section className='py-24 bg-gray-50 flex md:flex-row flex-col justify-center items-center gap-5 max-w-screen-xl mx-auto'>
 
             <img
                 loading='lazy'

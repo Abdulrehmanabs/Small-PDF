@@ -1,4 +1,6 @@
-const Head = ({ tool }) => {
+import Link from "next/link"
+
+const Choose_File = ({ tool }) => {
     let points = [
         "For Mac, Windows, Linux, iOS, and Android",
         "Turn your PDF into an editable Word file",
@@ -56,11 +58,16 @@ const Head = ({ tool }) => {
                                                     </span>
                                                 </div>
                                                 <button
-                                                    className="z-10 p-4 border-l-2 hover:bg-gray-200"
+                                                    className="z-10 relative p-4 border-l-2 hover:bg-gray-200"
                                                     onClick={(evt) => {
                                                         console.log("Clicked", evt)
                                                     }}
                                                 >
+                                                    <label
+                                                        htmlFor="links-open"
+                                                        className="absolute left-0 top-0 h-full w-full cursor-pointer"
+                                                    >
+                                                    </label>
                                                     <svg
                                                         className='w-4'
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +80,41 @@ const Head = ({ tool }) => {
                                                         </path>
                                                     </svg>
                                                 </button>
+                                                <input
+                                                    type="checkbox"
+                                                    className="peer hidden"
+                                                    id="links-open"
+                                                // defaultChecked={false}
+                                                />
+                                                <div className="peer-checked:block z-10 hidden w-56 absolute mt-16 rounded-lg overflow-hidden border-black bg-white shadow-lg">
+                                                    <ul className="bg-gray-900 text-orange-100">
+                                                        <li>
+                                                            <Link href="/" className="flex gap-2 px-4 py-3 hover:bg-gray-100 hover:text-gray-900">
+                                                                <svg className="w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19.002a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7h18zm-18-14a1 1 0 0 1 1-1h6.586a1 1 0 0 1 .707.293l1.414 1.414a1 1 0 0 0 .707.293H20a1 1 0 0 1 1 1v4H3z"></path></svg>
+                                                                From Device
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/" className="flex gap-2 px-4 py-3 hover:bg-gray-100 hover:text-gray-900">
+                                                                <svg className="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF46FB" d="M15 15h6v6h-6z"></path><path fill="#CA41FC" d="M9 15h6v6H9z"></path><path fill="#8B48FE" d="M3 15h6v6H3z"></path><path fill="#81E650" d="M21 9h-6v6h6z"></path><path fill="#00D267" d="M15 9H9v6h6z"></path><path fill="#00C0FF" d="M9 9H3v6h6z"></path><path fill="#FFD200" d="M15 3h6v6h-6z"></path><path fill="#FF8E00" d="M9 3h6v6H9z"></path><path fill="#FF5400" d="M3 3h6v6H3z"></path></svg>
+                                                                From Small PDF
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="https://www.dropbox.com/" target="_blank" className="flex gap-2 px-4 py-3 hover:bg-gray-100 hover:text-gray-900">
+                                                                <svg className="w-6" xmlns="http://www.w3.org/2000/svg" fill="#0061FF" viewBox="0 0 24 24"><path d="m12.015 6.574-5.508 3.573 5.508 3.574-5.508 3.574L1 13.69l5.507-3.573L1 6.574 6.507 3zM6.478 18.426l5.507-3.573 5.508 3.573L11.985 22zm5.537-4.735 5.507-3.573-5.507-3.544L17.493 3 23 6.574l-5.507 3.573L23 13.721l-5.507 3.574z"></path></svg>
+                                                                From DropBox
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="https://www.google.com/drive/" target="_blank" className="flex gap-2 px-4 py-3 hover:bg-gray-100 hover:text-gray-900">
+                                                                <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFC107" d="M8.333 3h7.334L23 15h-7.333z"></path><path fill="#1976D2" d="m4.601 21 3.7-6H23l-3.667 6z"></path><path fill="#4CAF50" d="M1 15.063 4.601 21 12 9 8.333 3z"></path></svg>
+                                                                From Google Drive
+                                                            </Link>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='p-3 text-center text-white'>
@@ -117,4 +159,4 @@ const Head = ({ tool }) => {
         </section>
     )
 }
-export default Head;
+export default Choose_File;

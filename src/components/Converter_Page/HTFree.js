@@ -19,7 +19,7 @@ const HTFree = () => {
             {
                 HTFree.map((item, indx) => {
                     return (
-                        <div key={indx} className='md:flex sm:p-10 p-5 bg-[rgb(242,246,255)] '>
+                        <div key={indx} className='md:flex sm:p-10 p-5 bg-[rgb(242,246,255)]'>
                             <div className='md:w-1/3 w-full'>
                                 <img
                                     loading='lazy'
@@ -28,20 +28,20 @@ const HTFree = () => {
                                 />
                             </div>
                             <div className='px-10 md:w-2/3 flex flex-col justify-center '>
-                                <h2 className='sm:text-4xl text-2xl  pb-4 font-bold text-[rgb(26, 26, 26)]'>
+                                <h2 className='sm:text-4xl text-2xl  pb-4 font-bold '>
                                     {item.title}
                                 </h2>
-                                <ol style={{ listStyle: "decimal" }} className='m-0 p-0 list-decimal'>
-                                    {
-                                        item.points.map((point, indx) => {
-                                            return (
-                                                <li key={indx} className='pt-0 flex m-0 py-2 px-0 font-normal sm:text-lg text-[rgb(26, 26, 26)]'>
-                                                    {point}
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ol>
+                                {/* <ul> */}
+                                {
+                                    item.points.map((point, indx) => {
+                                        return (
+                                            <li key={indx} className='pt-1 font-normal sm:text-lg '>
+                                                {point}
+                                            </li>
+                                        )
+                                    })
+                                }
+                                {/* </ul> */}
                             </div>
                         </div>
                     )
