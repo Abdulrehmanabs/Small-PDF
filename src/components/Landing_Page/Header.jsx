@@ -1,30 +1,23 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Header() {
+  let router = useRouter();
   let { register, handleSubmit } = useForm();
 
-  let [inputValue, setInputValue] = useState("");
-  let [category, setCategory] = useState("All Categories");
-  let router = useRouter();
-
-  function formData(event) {
-    event.preventDefault();
-
-    router.push(
-      "/tool/InputValue=" +
-        inputValue.split(" ").join("-").toLowerCase() +
-        "&&Category=" +
-        category.split(" ").join("-").toLowerCase()
-    );
-    console.log(inputValue, category);
+  function formData(data) {
+    if (data.Categories === "All Categories") {
+      alert("Choose Category");
+      return;
+    }
+    router.push("/tool/" + data.Categories.split(" ").join("-"));
+    console.log(data);
   }
 
   return (
     <div className="relative -mt-20 ">
       {/* Extra Spacing on the Top */}
-      <div className="py-10 sm:py-1"></div>
+      <div className="py-10 sm:py-0"></div>
       <img
         className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
         src="/Header-BG.png"
@@ -50,18 +43,17 @@ export default function Header() {
             AI News
           </button>
         </div>
-        <form onSubmit={formData} className="max-w-[900px] mx-auto mt-20 flex">
+        <form
+          onSubmit={handleSubmit(formData)}
+          className="max-w-[900px] mx-auto mt-20 flex"
+        >
           <div className="bg-[#081E4A] w-[90%] text-white rounded-xl flex overflow-hidden px-6 py-2  border-2 border-white">
             <input
               className="placeholder-current bg-inherit w-full  focus:outline-none"
               type="text"
-              required
-              onChange={(e) => {
-                setInputValue(e.target.value);
-              }}
-              // {...register("inputValue", { required: true })}
-              // defaultValue={"I Want an AI to "}
+              defaultValue={"I Want an AI to "}
               placeholder="I Want an AI to "
+              {...register("inputValue", { required: true })}
             />
             <datalist>
               <option value="Compress PDF" />
@@ -93,12 +85,10 @@ export default function Header() {
 
             <pre className="sm:block hidden bg-gray-400 w-0 border border-white ms-auto"></pre>
             <select
-              onChange={(e) => {
-                setCategory(e.target.value);
-              }}
+              {...register("Categories", { required: true })}
               className="sm:ms-6 sm:block hidden bg-inherit focus:outline-none cursor-pointer"
             >
-              <option value="All Categories">All Categories</option>
+              <option value="All Categories">Choose Category</option>
               <option value="Compress PDF">Compress PDF</option>
               <option value="PDF Converter">PDF Converter</option>
               <option value="PDF Scanner">PDF Scanner </option>

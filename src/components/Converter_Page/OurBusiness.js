@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OurBusiness = () => {
+const OurBusiness = ({ title }) => {
     let partners = [
         "https://s.smallpdf.com/static/c62d43e788d8f448.png",
         "https://s.smallpdf.com/static/411e54dafaec079f.png",
@@ -12,7 +12,7 @@ const OurBusiness = () => {
             <div className='py-10 '>
                 <div className='flex flex-col items-center m-auto p-6 '>
                     <h2 className='md:text-4xl text-2xl max-w-[800px] m-auto font-bold text-center text-[rgb(26,26,26)]'>
-                        Our Free Online PDF Editor is Trusted by Over 6,000+ Businesses Worldwide
+                        {title}
                     </h2>
                 </div>
                 <div className='max-w-[1200px] m-auto'>

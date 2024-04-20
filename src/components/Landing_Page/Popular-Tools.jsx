@@ -55,9 +55,9 @@ const Popular_Tools = () => {
               <Link
                 key={index}
                 href={"/tool/" + item.title.split(" ").join("-")}
-                className="flex items-start backdrop-blur-lg mb-3 rounded-xl bg-white/70 text-left p-4 lg:p-8 hover:-translate-y-2 transition-transform duration-700 border shadow"
+                className="flex items-start backdrop-blur-lg mb-3 rounded-xl bg-white/80 text-left p-4 lg:p-8 hover:bg-gray-100 hover:-translate-y-2 transition-transform duration-700 border shadow"
               >
-                <img className="w-[35px]  me-3" src={item.image} alt="ertyu" />
+                <img className="w-8  me-3" src={item.image} alt="ertyu" />
                 <div className="w-full">
                   <div className="font-bold flex">
                     <span className="">{item.title}</span>
@@ -79,7 +79,7 @@ const Popular_Tools = () => {
         {/* ------------------- */}
         <div className="text-center mt-10">
           <Link
-            href="/"
+            href="/tools"
             type="button"
             className="text-white font-bold bg-blue-700 hover:bg-blue-800  rounded-lg text-md px-5 py-2.5 mb-2 focus:outline-none"
           >

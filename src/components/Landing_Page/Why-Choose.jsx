@@ -40,7 +40,7 @@ const Why_Choose = () => {
     },
   ];
   return (
-    <section className="max-w-screen-xl mx-auto pb-12 sm:pb-16 lg:pb-20">
+    <section className="max-w-screen-xl mx-auto py-12 sm:py-16 lg:py-20">
       <div className="mx-auto px-6">
         <h1 className="text-center text-3xl font-bold sm:text-4xl xl:text-5xl">
           Why Choose Smallpdf?

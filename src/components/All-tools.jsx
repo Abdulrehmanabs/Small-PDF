@@ -117,7 +117,7 @@ const All_Tools = () => {
   ];
 
   return (
-    <div className=" mx-auto grid max-w-screen-xl gap-2 px-4 py-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 xl:px-10">
+    <div className="bg-white mx-auto grid max-w-screen-xl gap-2 px-4 py-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 xl:px-10">
       {/* Convert & Compress */}
       <div>
         <h2 className="mt-4 mb-2 font-medium xl:mb-4 ">Convert & Compress</h2>
