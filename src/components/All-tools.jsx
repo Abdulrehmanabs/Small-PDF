@@ -8,7 +8,7 @@ const All_Tools = () => {
       bg: "Convert_and_Compress",
     },
     {
-      text: "PDF Convertor",
+      text: "PDF Converter",
       image: "/tools/pdf-converter.svg",
       bg: "Convert_and_Compress",
     },

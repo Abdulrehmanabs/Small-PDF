@@ -79,7 +79,7 @@ const Popular_Tools = () => {
         {/* ------------------- */}
         <div className="text-center mt-10">
           <Link
-            href="/tools"
+            href="/pdf-tools"
             type="button"
             className="text-white font-bold bg-blue-700 hover:bg-blue-800  rounded-lg text-md px-5 py-2.5 mb-2 focus:outline-none"
           >

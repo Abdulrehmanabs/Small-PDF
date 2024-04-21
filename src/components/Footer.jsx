@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 mx-auto max-w-screen-xl">
-      <div className=" py-10 px-4 xl:px-10  grid gap-4 sm:grid-cols-2 md:grid-cols-4 ">
+    <footer className="bg-gray-50 ">
+      <div className="mx-auto max-w-screen-xl py-10 px-4 xl:px-10  grid gap-4 sm:grid-cols-2 md:grid-cols-4 ">
         <div className="max-w-sm">
           <div className="mb-4 mt-4 space-x-2">
             <span className="text-3xl font-bold">Giridot</span>
@@ -155,43 +155,45 @@ const Footer = () => {
         </div>
       </div>
       {/* Social breaker */}
-      <div className="flex flex-col gap-y-4 px-4 py-3 text-center bg-gray-100 text-gray-500 sm:flex-row sm:justify-between sm:text-left">
-        <div className="order-2">
-          Copyright © 2024 Giridot | All Rights Reserved
-        </div>
-        <div className="order-1 flex gap-6 justify-center">
-          <a href="#Instagram">
-            <img
-              className="w-6"
-              src="/Social/instagram-icon.svg"
-              alt="instagram-icon"
-            />
-          </a>
-          <a href="#twitter">
-            <img className="w-6" src="/Social/x-icon.svg" alt="x-icon" />
-          </a>
+      <div className="bg-gray-100">
+        <div className="mx-auto max-w-screen-xl flex flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
+          <div className="order-2">
+            Copyright © 2024 Giridot | All Rights Reserved
+          </div>
+          <div className="order-1 flex gap-6 justify-center">
+            <a href="#Instagram">
+              <img
+                className="w-6"
+                src="/Social/instagram-icon.svg"
+                alt="instagram-icon"
+              />
+            </a>
+            <a href="#twitter">
+              <img className="w-6" src="/Social/x-icon.svg" alt="x-icon" />
+            </a>
 
-          <a href="#Linkedin">
-            <img
-              className="w-6"
-              src="/Social/linkedin-icon.svg"
-              alt="linkedin-icon"
-            />
-          </a>
-          <a href="#facebook">
-            <img
-              className="w-6"
-              src="/Social/facebook-icon.svg"
-              alt="facebook-icon"
-            />
-          </a>
-          <a href="#youtube">
-            <img
-              className="w-6"
-              src="/Social/youtube-icon.svg"
-              alt="youtube-icon"
-            />
-          </a>
+            <a href="#Linkedin">
+              <img
+                className="w-6"
+                src="/Social/linkedin-icon.svg"
+                alt="linkedin-icon"
+              />
+            </a>
+            <a href="#facebook">
+              <img
+                className="w-6"
+                src="/Social/facebook-icon.svg"
+                alt="facebook-icon"
+              />
+            </a>
+            <a href="#youtube">
+              <img
+                className="w-6"
+                src="/Social/youtube-icon.svg"
+                alt="youtube-icon"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

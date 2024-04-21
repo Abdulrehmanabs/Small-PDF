@@ -13,7 +13,7 @@ const Choose_File = ({ tool, title, choose_dec, choose_list }) => {
                 <div
                     className={`rounded 
                         ${tool?.includes("Word") ? "bg-[#3D99F5]" : tool?.includes("Scanner") ? "bg-[#003CB2]" :
-                            tool?.includes("OCR") || tool?.includes("Convertor") || tool?.includes("Compresor") || tool?.includes("Compress") ? "bg-[#F23030]" :
+                            tool?.includes("OCR") || tool?.includes("Converter") || tool?.includes("Compresor") || tool?.includes("Compress") ? "bg-[#F23030]" :
                                 tool?.includes("Merge") || tool?.includes("Split") || tool?.includes("Rotate") || tool?.includes("Delete") || tool?.includes("Extract") ? "bg-[#7961F2]" :
                                     tool?.includes("AI") || tool?.includes("Number") || tool?.includes("Reader") || tool?.includes("Edit") ? "bg-[#0FC0C5]" :
                                         tool?.includes("eSign") ? "bg-[#E667E6]" :

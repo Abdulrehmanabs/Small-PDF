@@ -65,7 +65,7 @@ export const Navbar = () => {
           Compress
         </Link>
         <Link
-          href="/tool/PDF-Convertor"
+          href="/tool/PDF-Converter"
           className={` hidden lg:inline-block p-4 text-gray-800 hover:bg-gray-100 4`}
         >
           Convert

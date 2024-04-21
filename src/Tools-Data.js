@@ -2341,7 +2341,7 @@ const Tools = [
     },
     {
         id: 24,
-        slug: "pdf-convertor",
+        slug: "pdf-converter",
         title: "PDF Converter",
         choose_dec: "Internet's #1 and 100% free online PDF converter to convert your files to and from PDFs. No registration or installation needed. Start converting today!",
         choose_list: [
